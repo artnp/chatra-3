@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Srisakdi&display=swap');
+        body{
+            font-family: 'Srisakdi', cursive;
+            font-size:x-large
+           
+        }
+        table, th, td {
+            text-align: center;
+}
+        .down
+{
+    display:block;
+    -webkit-transform: rotate(-90deg); 
+    -moz-transform: rotate(-90deg); 
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); //For IE support
+}
+        </style>
+    
+    <title>ฉัตร สาม ชั้น</title>
+</head>
+<body>
+    <center>
+    <h1>ฉัตร สาม ชั้น</h1>
+         
+    เพศ: <select id="sex" style="font-size:24px;">
+        <option value="ชาย">ชาย</option>
+        <option value="หญิง">หญิง</option>
+      </select> 
+      อายุ: <input type="number" id="age" style="font-size:30px;width:50px;height:40px">   
+      เกิดเดือน: <select id="month" style="font-size:24px;">
+        <option value="1">๑</option>
+        <option value="2">๒</option>
+        <option value="3">๓</option>
+        <option value="4">๔</option>
+        <option value="5">๕</option>
+        <option value="6">๖</option>
+        <option value="7">๗</option>
+        <option value="8">๘</option>
+        <option value="9">๙</option>
+        <option value="10">๑๐</option>
+        <option value="11">๑๑</option>
+        <option value="12">๑๒</option>
+      </select>
+      => <button class="cal" onsubmit="cal()" style="font-size:18px">ทำนาย</button><br><br><table><tr>
+        <td><b>พระราม</b></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table><br>
+      <table style="width: 14%;"><tr>
+        <td><span class="down"><div id="อิศาณ">อิศาณ</div></span></td>
+        <td><span class="down"><div id="บูรพา">บูรพา</div></span></td>
+        <td><span class="down"><div id="อาคเณย์">อาคเณย์</div></span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table><table style="width: 29%;"><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td>
+        <td><div id="a1">๗</div></td><td></td><td></td>
+        <td><div id="b1">๖</div></td><td></td><td></td>
+        <td><div id="c1">๑</div></td><td></td><td></td></tr><tr><td></td>
+        <td><div id="พิเภก">พิเภก</div></td><td></td>
+        <td><div id="a2">๖</div></td><td></td>
+        <td><div id="b2">๑</div></td><td></td>
+        <td><div id="c2">๒</div></td><td></td>
+        <td><div id="พิมพิสาร">พิมพิสาร</div></td><td></td></tr><tr><td></td><td></td><td></td><td></td>
+        <td><div id="a3">๑</div></td>
+        <td><div id="b3">๒</div></td>
+        <td><div id="c3">๓</div></td> <td></td><td></td><td></td><td></td></tr><tr>
+        <td><b>หนุมาน</b></td>
+        <td><div id="อุดร">อุดร</div></td>
+        <td><div id="h1">๕</div></td>
+        <td><div id="h2">๘</div></td>
+        <td><div id="h3">๖</div></td>
+        <td>◘</td>
+        <td><div id="d3">๔</div></td>
+        <td><div id="d2">๓</div></td>
+        <td><div id="d1">๒</div></td>
+        <td><div id="ทักษิณ">ทักษิณ</div></td>
+        <td><b>พระลักษณ์</b></td></tr><tr><td></td><td></td><td></td><td></td>
+        <td><div id="g1">๘</div></td>
+        <td><div id="f3">๕</div></td>
+        <td><div id="e3">๗</div></td><td></td><td></td><td></td><td></td></tr><tr><td></td>
+        <td><div id="สะดายุ">สะดายุ</div></td><td></td>
+        <td><div id="g2">๕</div></td><td></td>
+        <td><div id="f2">๗</div></td><td></td>
+        <td><div id="e2">๔</div></td><td></td>
+        <td><div id="ทศกรรฐ">ทศกรรฐ</div></td><td></td></tr><tr><td></td><td></td>
+        <td><div id="g3">๗</div></td><td></td><td></td>
+        <td><div id="f1">๔</div></td><td></td><td></td>
+        <td><div id="e1">๓</div></td>     <td></td>  <td></td></tr></tbody></table>
+        <table style="width: 14%;"><tr><td></td>
+        <td><span class="down"><div id="พยัพ">พยัพ</div></span></td>
+        <td><span class="down"><div id="ประจิม">ประจิม</div></span></td>
+        <td><span class="down"><div id="หระดี">หระดี</div></span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table><br><table><tr>
+        <td><b>ษีดา</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>
+      <hr>
+    <p></p>
+    <div id="text"></div>
+    </center>
+    <script>
+function cal() {
+z = (age.value-2)
+x = document.getElementById("sex")
+sex = x.value
+m = document.getElementById("month").value
+
+function number(){
+    if (m == 9){
+        m = 5
+    } else if (m == 10){
+        m = 6 } else if (m == 11){
+        m = 7 } else if (m == 12){
+        m = 7 }} number()
+
+male = ['อาคเณย์', 'บูรพา', 'อิศาณ', 'พิเภก', 'อุดร', 'สะดายุ', 'พยัพ', 'ประจิม', 'หระดี', 'ทศกรรฐ', 'ทักษิณ', 'พิมพิสาร', 'อาคเณย์', 'บูรพา', 'อิศาณ', 'พิเภก', 'อุดร', 'สะดายุ', 'พยัพ', 'ประจิม', 'หระดี', 'ทศกรรฐ', 'ทักษิณ', 'พิมพิสาร', 'อาคเณย์', 'บูรพา', 'อิศาณ', 'พิเภก', 'อุดร', 'สะดายุ', 'พยัพ', 'ประจิม', 'หระดี', 'ทศกรรฐ', 'ทักษิณ', 'พิมพิสาร', 'อาคเณย์', 'บูรพา', 'อิศาณ', 'พิเภก', 'อุดร', 'สะดายุ', 'พยัพ', 'ประจิม', 'หระดี', 'ทศกรรฐ', 'ทักษิณ', 'พิมพิสาร', 'อาคเณย์', 'บูรพา', 'อิศาณ', 'พิเภก', 'อุดร', 'สะดายุ', 'พยัพ', 'ประจิม', 'หระดี', 'ทศกรรฐ', 'ทักษิณ', 'พิมพิสาร', 'อาคเณย์', 'บูรพา', 'อิศาณ', 'พิเภก', 'อุดร', 'สะดายุ', 'พยัพ', 'ประจิม', 'หระดี', 'ทศกรรฐ', 'ทักษิณ', 'พิมพิสาร', 'อาคเณย์', 'บูรพา', 'อิศาณ', 'พิเภก', 'อุดร', 'สะดายุ', 'พยัพ', 'ประจิม', 'หระดี', 'ทศกรรฐ', 'ทักษิณ', 'พิมพิสาร', 'อาคเณย์', 'บูรพา', 'อิศาณ', 'พิเภก', 'อุดร', 'สะดายุ', 'พยัพ', 'ประจิม', 'หระดี', 'ทศกรรฐ', 'ทักษิณ', 'พิมพิสาร', 'อาคเณย์', 'บูรพา', 'อิศาณ', 'พิเภก', 'อุดร', 'สะดายุ', 'พยัพ', 'ประจิม', 'หระดี', 'ทศกรรฐ', 'ทักษิณ', 'พิมพิสาร', 'อาคเณย์', 'บูรพา', 'อิศาณ', 'พิเภก', 'อุดร', 'สะดายุ', 'พยัพ', 'ประจิม', 'หระดี', 'ทศกรรฐ', 'ทักษิณ', 'พิมพิสาร', 'อาคเณย์', 'บูรพา', 'อิศาณ', 'พิเภก', 'อุดร', 'สะดายุ', 'พยัพ', 'ประจิม', 'หระดี', 'ทศกรรฐ', 'ทักษิณ', 'พิมพิสาร', 'อาคเณย์', 'บูรพา', 'อิศาณ', 'พิเภก', 'อุดร', 'สะดายุ', 'พยัพ', 'ประจิม', 'หระดี', 'ทศกรรฐ', 'ทักษิณ', 'พิมพิสาร']
+female =['พยัพ', 'ประจิม','หระดี','ทศกรรฐ','ทักษิณ','พิมพิสาร','อาคเณย์','บูรพา','อิศาณ','พิเภก','อุดร','สะดายุ', 'พยัพ', 'ประจิม','หระดี','ทศกรรฐ','ทักษิณ','พิมพิสาร','อาคเณย์','บูรพา','อิศาณ','พิเภก','อุดร','สะดายุ', 'พยัพ', 'ประจิม','หระดี','ทศกรรฐ','ทักษิณ','พิมพิสาร','อาคเณย์','บูรพา','อิศาณ','พิเภก','อุดร','สะดายุ', 'พยัพ', 'ประจิม','หระดี','ทศกรรฐ','ทักษิณ','พิมพิสาร','อาคเณย์','บูรพา','อิศาณ','พิเภก','อุดร','สะดายุ', 'พยัพ', 'ประจิม','หระดี','ทศกรรฐ','ทักษิณ','พิมพิสาร','อาคเณย์','บูรพา','อิศาณ','พิเภก','อุดร','สะดายุ', 'พยัพ', 'ประจิม','หระดี','ทศกรรฐ','ทักษิณ','พิมพิสาร','อาคเณย์','บูรพา','อิศาณ','พิเภก','อุดร','สะดายุ', 'พยัพ', 'ประจิม','หระดี','ทศกรรฐ','ทักษิณ','พิมพิสาร','อาคเณย์','บูรพา','อิศาณ','พิเภก','อุดร','สะดายุ', 'พยัพ', 'ประจิม','หระดี','ทศกรรฐ','ทักษิณ','พิมพิสาร','อาคเณย์','บูรพา','อิศาณ','พิเภก','อุดร','สะดายุ', 'พยัพ', 'ประจิม','หระดี','ทศกรรฐ','ทักษิณ','พิมพิสาร','อาคเณย์','บูรพา','อิศาณ','พิเภก','อุดร','สะดายุ', 'พยัพ', 'ประจิม','หระดี','ทศกรรฐ','ทักษิณ','พิมพิสาร','อาคเณย์','บูรพา','อิศาณ','พิเภก','อุดร','สะดายุ', 'พยัพ', 'ประจิม','หระดี','ทศกรรฐ','ทักษิณ','พิมพิสาร','อาคเณย์','บูรพา','อิศาณ','พิเภก','อุดร','สะดายุ', 'พยัพ', 'ประจิม','หระดี','ทศกรรฐ','ทักษิณ','พิมพิสาร','อาคเณย์','บูรพา','อิศาณ','พิเภก','อุดร','สะดายุ']
+document.getElementById("อาคเณย์").style.color = "black";
+document.getElementById("บูรพา").style.color = "black";
+document.getElementById("อิศาณ").style.color = "black";
+document.getElementById("พิเภก").style.color = "black";
+document.getElementById("อุดร").style.color = "black";
+document.getElementById("สะดายุ").style.color = "black";
+document.getElementById("พยัพ").style.color = "black";
+document.getElementById("ประจิม").style.color = "black";
+document.getElementById("หระดี").style.color = "black";
+document.getElementById("ทศกรรฐ").style.color = "black";
+document.getElementById("ทักษิณ").style.color = "black";
+document.getElementById("พิมพิสาร").style.color = "black";
+document.getElementById("a1").style.color = "black";
+document.getElementById("a2").style.color = "black";
+document.getElementById("a3").style.color = "black";
+document.getElementById("b1").style.color = "black";
+document.getElementById("b2").style.color = "black";
+document.getElementById("b3").style.color = "black";
+document.getElementById("c1").style.color = "black";
+document.getElementById("c2").style.color = "black";
+document.getElementById("c3").style.color = "black";
+document.getElementById("d1").style.color = "black";
+document.getElementById("d2").style.color = "black";
+document.getElementById("d3").style.color = "black";
+document.getElementById("e1").style.color = "black";
+document.getElementById("e2").style.color = "black";
+document.getElementById("e3").style.color = "black";
+document.getElementById("f1").style.color = "black";
+document.getElementById("f2").style.color = "black";
+document.getElementById("f3").style.color = "black";
+document.getElementById("g1").style.color = "black";
+document.getElementById("g2").style.color = "black";
+document.getElementById("g3").style.color = "black";
+document.getElementById("h1").style.color = "black";
+document.getElementById("h2").style.color = "black";
+document.getElementById("h3").style.color = "black";
+
+if (sex === "ชาย" && male[z] == "อิศาณ" && m == 1 || sex === "หญิง" && female[z] == "อิศาณ" && m == 1){
+    document.getElementById("อิศาณ").style.color = "red"
+    document.getElementById("a3").style.color = "red"
+    document.getElementById("text").innerHTML='นั่ง ขุน มาร พิเภก ผู้ เปน น้อง ทศกรรฐ ทาย ว่า จะ เศร้า โศก ศัลย์ พัก พวก เผ่า พันธุ์ จะ พาล จะ ผิด ตัว ตน จะ พลัด ลูก เมีย ค่า คน ทุกข์ ร้าย อลวน จะ อัปยศ หนัก หนา ข้อ หนึ่ง จะ จาก ถานา โทษ ทัณฑ์ อาญา จะ ถูก จะ ต้อง รำคาล'
+} else if (sex === "ชาย" && male[z] == "อิศาณ" && m == 6 || sex === "หญิง" && female[z] == "อิศาณ" && m == 6){
+    document.getElementById("อิศาณ").style.color = "red"
+    document.getElementById("a2").style.color = "red"
+    document.getElementById("text").innerHTML='พิเภก ขุนมาร มา พบ พระรามฤทธิ์ ทาย ว่า โชค ใหญ่ มาก มี พระ ปิ่น ธรณี จะ ทรง พระ กรุณา คิดใด ได้ ดัง จินดา ชอบ เชิง ยาตรา ไป ค้า จะ ได้ กำไร ถ้า เปน ข้า เฝ้า ท้าว ไทย จะ ถึง ยศ ไกร ประสิทธิ์ ด้วย ศฤงฆาร'
+} else if (sex === "ชาย" && male[z] == "อิศาณ" && m == 7 || sex === "หญิง" && female[z] == "อิศาณ" && m == 7){
+    document.getElementById("อิศาณ").style.color = "red"
+    document.getElementById("a1").style.color = "red"
+    document.getElementById("text").innerHTML='พิเภก ขุนมาร ก็ ไป กิน เมือง ลงกา เคราะห์ ดี มี ลาภ หนัก หนา สิ่ง ใด ปราถนา จะ ได้ สิ่ง นั้น โดย จง มี สิน มี ศักดิ์ ยิ่ง ยง ทำ ได้ ไว้ คง สมบัติ จะ มี มาก มูล ทาย ว่า ภาย น่า อาดูร โรคา มาก มูล ความไข้ จะ มา ถึง ตัว ผิ ไข้ ว่า ย่อม ปวด หัว โศก เศร้า เมา มัว ระทด ระทวย ป่วย จิตร ท่าน ว่า ให้ เสีย ผี ตาม ทิศ พระ ครู ประสิทธิ์ สมมุติ กล่าว มา นาน ให้ ปั้น รูป ยักษ โอฬาร ต่าง รูป วาย ปราณ ผัก ซ่า ปลา ยำ เอม ออน ฉัตร ธง บวร ขนม เข้า เหนียว บูชา เช้า ตอก ดอก ไม้ บุษา ทั้ง มัจฉะมังษา ถั่ว และ งา ทุก ประการ เส้น แล้ว จึง เอา กระบาน เสีย ทิศ vblkI ความไข้ จะ ค่อย คลาย คลา'
+} else if (sex === "ชาย" && male[z] == "บูรพา" && m == 2 || sex === "หญิง" && female[z] == "บูรพา" && m == 2){
+    document.getElementById("บูรพา").style.color = "red"
+    document.getElementById("b3").style.color = "red"
+    document.getElementById("text").innerHTML='พระ ราม ฤทธา เมื่อ ได้ ษีดา เทวี ทาย ว่า เคราะห์ งาม ยาม ดี สมณ พราหมณ์ชี จะ ได้ ซึ่ง ลาภ สการ จัก ได้ หญิง หนุ่ม นงคราญ ร่วม รศศ สงสาร สนิท เสน่ห์ สมร จะได้ ดัง ใจ บวร เสื้อ ผ้า อาภรณ์ เพราะ ท่าน ผู้ ใหญ่ บูชา เคราะห์ ดี ชอบ เชิง ยาตรา ไป จาก ถานา จะ ได้ ซึ่ง ลาภ โอฬาร'
+} else if (sex === "ชาย" && male[z] == "บูรพา" && m == 1 || sex === "หญิง" && female[z] == "บูรพา" && m == 1){
+    document.getElementById("บูรพา").style.color = "red"
+    document.getElementById("b2").style.color = "red"
+    document.getElementById("text").innerHTML='พระ ราม รามา เมื่อ จาก ษีดา ดวง จันทร์ ทาย ว่า จะ เกิดโศกศัลย์ ลูก เมีย เผ่า พันธุ์ จะ พลัด จะ พราก จากไหล ถ้า มี เข้า ของ ข้า ไทย หายตก หก ไป จะ ได้ โดย ยาก หนัก หนา เคราะห์ ร้าย ห้าม อย่า ยาตรา ไป จาก ถานา จะ เกิด ซึ่ง ทุกข์ ทำ วน หลง ด้วย เลห์ กล แก่ ชาย เดิน หน เร้ง ระวัง ตน จะ เสีย ที่ รัก เสน่หา'
+} else if (sex === "ชาย" && male[z] == "บูรพา" && m == 6 || sex === "หญิง" && female[z] == "บูรพา" && m == 6){
+    document.getElementById("บูรพา").style.color = "red"
+    document.getElementById("b1").style.color = "red"
+    document.getElementById("text").innerHTML='เมื่อ พระ ราชา เธอ ได้ ษี ดา คืน คง ทาย ว่า จะ มี โชค ใหญ่ ยิ่ง ยง ชอบ ไป ณรงค์ จะตะบะฤทธา จะ ได้ เสวย ศุข เปรม ปรา ด้วย บุตร ภรรยา อัน มา แต่ บ้าน เมือง ไกล แม้ มี ทรัพย์ สิน สิ่ง ใด หาย หก ตก ไป จะ ได้ คืน มา บมิมาน ผิ ว่า ไข้ ต้อง ผี บ้าน ผี โจร ทหาร  เร่ง ให้ ตบ แต่ง บูชา ให้ ปั้น รูป มะระณะ ต่าง ตน บู ชา เสีย หน แต่ กาล ก่อน กล่าว มา จึง ยก ไป ทิศ บูรพา จัก ถอน โรคา จะ ได้ ความ ศุข สำราญ'
+} else if (sex === "ชาย" && male[z] == "อาคเณย์" && m == 3 || sex === "หญิง" && female[z] == "อาคเณย์" && m == 3){
+    document.getElementById("อาคเณย์").style.color = "red"
+    document.getElementById("c3").style.color = "red"
+    document.getElementById("text").innerHTML='ท้าว พิมพิสาร เมื่อ ลูก ชิง เอา นัครา ทาย ว่า เคราะห์ ร้าย หนัก หนา ค่าไทย ไร่ นา ลูก หลาน จะ ปล้น ปลอม เอา จะ เกิด ความ ทุกข์ ฉุก ฌแา เพราะ ลูก ของ เรา ใจ ร้าย โม เม'
+} else if (sex === "ชาย" && male[z] == "อาคเณย์" && m == 2 || sex === "หญิง" && female[z] == "อาคเณย์" && m == 2){
+    document.getElementById("อาคเณย์").style.color = "red"
+    document.getElementById("c2").style.color = "red"
+    document.getElementById("text").innerHTML='กรุง ราชสิงเห เมื่อ ท้าว เธอ ถึง โสดา ทาย ว่า เคราะห์ ดี มหิมา สิ่ง ใด ปราถนา จะ ได้ สิ่ง นั้น บมินาน จะ อยู่ ศุข สำราญ ด้วย ลูก หลาน ปรกติ ปรีดา'
+} else if (sex === "ชาย" && male[z] == "อาคเณย์" && m == 1 || sex === "หญิง" && female[z] == "อาคเณย์" && m == 1){
+    document.getElementById("อาคเณย์").style.color = "red"
+    document.getElementById("c1").style.color = "red"
+    document.getElementById("text").innerHTML='พิมพิสาร ราชา เมื่อ ม้วย พระ ชนม์ ไป สวรรค์ ทาย ว่า พระ เคราะห์ ผู้ นั้น ดี ร้าย เท่า กัน จะ เกิด ทั้ง สอง ประการ เดิม ที ได้ ทุกข์ รำ คาล ภาย หลัง พิมพิสาร ก็ ได้ ศุข เกษม เปรม ปรี ผิ ไข้ ประดุจ ไฟ จี้ ผี โจร ยายี ให้ เร่ง ตบ แต่ง บู ชา ให้ ปั้น รูป พระยา ถือ ตรี ศิล แล รูป ปีศาจ สาม คน ปั้น รูป มะระณะ ต่าง คน เสร็จ แล้ว เสีย หน อาคเณย์ ทิศา จึง จะ คลาย ไข้ หาย ปีทา ลุก นั่ง ไสยา จะ รับ อาหาร การ กิน'
+} else if (sex === "ชาย" && male[z] == "ทักษิณ" && m == 4 || sex === "หญิง" && female[z] == "ทักษิณ" && m == 4){
+    document.getElementById("ทักษิณ").style.color = "red"
+    document.getElementById("d3").style.color = "red"
+    document.getElementById("text").innerHTML='พระ ลักษณ์ ภูมินทร์ ทรง ผนวช เปน ชีดง ทาย ว่า โชค ใหญ่ ยิ่ง ยง สิ่ง ใด ประสงค์ จะ ได้ ดัง ใจ ปราถนา มี โชค ชอบ เรียน วิชา จะ เกิด วิทธยา ลาภา ประสิทธิ์ ทุก อัน ให้ เกรง หญิง ม่าย ใจ อาธรรม์ เพราะ เพริศ เฉิด ฉัน จะ ทำ รำจวน กวน ใจ อย่า ได้ สม สนิท พิศไสม อย่า ไว้ วาง ใจ มัน พ่อ มัน ลวง ยายี'
+} else if (sex === "ชาย" && male[z] == "ทักษิณ" && m == 3 || sex === "หญิง" && female[z] == "ทักษิณ" && m == 3){
+    document.getElementById("ทักษิณ").style.color = "red"
+    document.getElementById("d2").style.color = "red"
+    document.getElementById("text").innerHTML='พระ ลักษณ์ ภูมินทร์ เมื่อ ต้อง โมกขศักดิ์ ตรึง ตรา ทาย ว่า เคราะห์ หนัก หนา เกรง หัตถ์ บาบท จะ ต้อง อาวุธ แล ขวาก หนาม จะ เกิด ทุกข์ มาก ขาม โลหิต ไหล ลาม ให้ เกรง ผู้ ชาย ดำ ทมิฬ'
+} else if (sex === "ชาย" && male[z] == "ทักษิณ" && m == 2 || sex === "หญิง" && female[z] == "ทักษิณ" && m == 2){
+    document.getElementById("ทักษิณ").style.color = "red"
+    document.getElementById("d1").style.color = "red"
+    document.getElementById("text").innerHTML='พระ ลักษณ์ ภูมินทร์ ก็ พ้น ต้องโมกขศักดิ์ ทาย ว่า เคราะห์ นี้ ดี นัก พระ ผู้ ทรง ศักดิ์ ก็ ชะนะ เสี้ยน สัตรู ถ้า ว่า เปน ข้า เฝ้า ท้าว พระยา ภู ญาติ์ จะ ค้ำ ชู เพราะ มิตร สหาย อัน สบ สรรพ์ ผิ ไข้ ให้ เจ็บ ป่วย ปั่น พอง พุ ดุ ดัน เพราะ ผี ปีศาจ มารยา เร่ง ให้ ตบ แต่ง บูชา ปั้น รูป พระยา แล รูป ปีศาจ สี่ คน ปั้น รูป มะระณะ ต่าง ตน เสร็จ แล้ว เสีย หน ทักษิณ ทิศา จะ หาย ความ ไข้ ปีทา พ้น จาก โรคร จะ ได้ ศุข เกษม เปรม ปรี'
+} else if (sex === "ชาย" && male[z] == "หระดี" && m == 7 || sex === "หญิง" && female[z] == "หระดี" && m == 7){
+    document.getElementById("หระดี").style.color = "red"
+    document.getElementById("e3").style.color = "red"
+    document.getElementById("text").innerHTML='ทศภักตร์ ยักษี ก็ ลัก ษีดา ดวง จันทร์ ทาย ว่า เคราะห์ ผู้ นั้น ดี ร้าย เท่า กัน จะ ได้ ทั้ง สอง ประการ เดิม ที จะ ได้ ศุข สำราญ แล้ว กลับ รำคาล นาน ไป จะ เกิด เหตุ ใหญ่ ให้ เร่ง บำหยัดโจร แล ไฟ เกรง หญิง อาไศรย จะ ให้ บัง เกิด เหตุ ใหญ่ ให้ เร่ง บำหยัดโจร แล ไฟ เกรง หญิง อาไศรย จะ ให้ บัง เกิด โกลี'
+} else if (sex === "ชาย" && male[z] == "หระดี" && m == 4 || sex === "หญิง" && female[z] == "หระดี" && m == 4){
+    document.getElementById("หระดี").style.color = "red"
+    document.getElementById("e2").style.color = "red"
+    document.getElementById("text").innerHTML='ทศภักตร์ ยักษี ให้ เทพ แต่ง ลงกา ทาย ว่า เคราะห์ ดี มัชฌิมา ทำ ไร่ ไถ นา จะ บังเกิด ผล พ้น ประมาณ ผิ ว่า เปน ข้า เฝ้า พระ ภูบาล จะ ได้ ศฤงฆาร เปน ศุข เกษม เปรม ปรี'
+} else if (sex === "ชาย" && male[z] == "หระดี" && m == 3 || sex === "หญิง" && female[z] == "หระดี" && m == 3){
+    document.getElementById("หระดี").style.color = "red"
+    document.getElementById("e1").style.color = "red"
+    document.getElementById("text").innerHTML='ทศภักตร์ ยักษี ก็ เสีย สมบัติ เมือง ลงกา ทาย ว่า เคราะห์ ร้าย หนัก หนา อย่า ได้ ดำเนิร เดิน ไกล จะ เกิด ทุกข์ โศก โรค ไภย ถอย ถด ยศไกร จะ ถึง ซึ่ง ความ ฉิบหาย ถ้า ไข้ มัก ให้ เจ็บ ตาย ทุรน ทุราย ละเมอ ละมาย หลง ใหล ให้ เร่ง เสีย โดย ใน สมมุติ กล่าว ไว้ จะ พ้น ซึ่ง เคราะห์ อัน เศร้า หมอง ให้ ปั้น รูป ยักษ หนึ่ง ลำยอง มือ ถือ กระบอง แล รูป ปีศาจ เจ็ด คน ปั้น รูป มระณะ ต่าง ตน เสร็จ แล้ว เสีย หน หรดี ทิศา จะ หาย ทุกข์ โศก โรคร ซึ่ง ความ ปราถนา จะ ได้ ชะนะ สัตรู'
+} else if (sex === "ชาย" && male[z] == "ประจิม" && m == 5 || sex === "หญิง" && female[z] == "ประจิม" && m == 5){
+    document.getElementById("ประจิม").style.color = "red"
+    document.getElementById("f3").style.color = "red"
+    document.getElementById("text").innerHTML='rit ครู นงนุช โฉมตรู เมื่อ ได้ เปน เมีย พระ รามา ทาย ว่า พระ เคราะห์ นั้น ดี หนัก หนา สิ่ง ใด จินตนา จะ ได้ สิ่ง นั้น โดย ใจ ผิ ว่า เปน ข้า เฝ้า ท้าว ไทย จะ ถึง ยศไกร จะ ได้ ศุข เกษม เปรม ปรี ผู้ หญิง จะ ได้ สามี ประกอบ ด้วย ฤทธิ์ จะ มี ตะบะ เดชา ผู้ ชาย จะ ได้ ภรรยา รูป ทรง โสภา เพราะ ท่าน ผู้ เฒ่า พราหมณ์ ชี'
+} else if (sex === "ชาย" && male[z] == "ประจิม" && m == 7 || sex === "หญิง" && female[z] == "ประจิม" && m == 7){
+    document.getElementById("ประจิม").style.color = "red"
+    document.getElementById("f2").style.color = "red"
+    document.getElementById("text").innerHTML='เสารี นงนุชเทพี เมื่อ พราก จาก พระ รามา ทาย ว่า เคราะห์ ร้าย หนัก หนา ความ ทุกข์ โสกา จะ มา ต้อง ร้อน รำ คาล ให้ เกรง จะ พลัด พราก สถาน คน ดำ ใจ พาล มัน จะ ฬ่อ ลวง โดย กล ผู้ หญิง จะ จาก ผัว คน ผู้ ชาย ทุกข์ ทน จะ พลัด พราก จาก เมีย นาน'
+} else if (sex === "ชาย" && male[z] == "ประจิม" && m == 4 || sex === "หญิง" && female[z] == "ประจิม" && m == 4){
+    document.getElementById("ประจิม").style.color = "red"
+    document.getElementById("f1").style.color = "red"
+    document.getElementById("text").innerHTML='ษี ดา นงตาญ เมื่อ มา แต่ เมือง ลงกา ทาย ว่า เคราะห์ ดี มหิมา สิ่ง ใด ปราถนา จะ ได้ สำเร็จ ทุก อัน จะ ได้ ชื่น ชม หฤหรรษ์ ด้วย ญาติ์ เผ่า พันธุ์ อัน พลัด อัน พราก จาก นาน ผิ ไข้ ให้ เสีย กระบาน ปั้น รูป นงคราญ แล รูป ปีศาจ สี่ คน ปั้น รูป มระณะ ต่าง ตน เสร็จ แล้ว เสีย หน ประจิม ทิศา จะ พ้น ความ ไข้ ปีทา ถอย โรค โรคา เปน ศุข สำราญ ใจ'
+} else if (sex === "ชาย" && male[z] == "พยัพ" && m == 8 || sex === "หญิง" && female[z] == "พยัพ" && m == 8){
+    document.getElementById("พยัพ").style.color = "red"
+    document.getElementById("g3").style.color = "red"
+    document.getElementById("text").innerHTML='สะดายุ ฤทธิไกร พ่าย แพ้ แก่ แหวน ษี ดา ทาย ว่า เคราะห์ ร้าย หนัก หนา ให้ เกรง อาตมา จะ ต้อง ไภย จอง จำ หนึ่ง โสด ให้ เกรง ถอย คำ เกรง ของ จำนำ แล คน มา อาไศรย จะ ทำ ให้ ราคาล ใจ จะ เอา ตัว ไป ให้ ทุกข์ แทน ตัว'
+} else if (sex === "ชาย" && male[z] == "พยัพ" && m == 5 || sex === "หญิง" && female[z] == "พยัพ" && m == 5){
+    document.getElementById("พยัพ").style.color = "red"
+    document.getElementById("g2").style.color = "red"
+    document.getElementById("text").innerHTML='นารายน์ จอม ปาง เมื่อ ปลง สะดายู จอม ไกร ทาย ว่า เคราะห์ ดี โชค ไชย มนตรี ท้าว ไทย จะ ให้ ประโยชน์ โปรด ตน ทำ ใด ย่อม จง เกิด ผล โค น่า ค่า คน มี มาก หลาย โอฬาร'
+} else if (sex === "ชาย" && male[z] == "พยัพ" && m == 7 || sex === "หญิง" && female[z] == "พยัพ" && m == 7){
+    document.getElementById("พยัพ").style.color = "red"
+    document.getElementById("g1").style.color = "red"
+    document.getElementById("text").innerHTML='พระยา มาร เข้า สับ ปยุทธ์ ด้วย ท้าว โกษีย์ ทาย ว่า เคราะห์ ร้าย มิ ดี ให้ เกรง บุตรี จะ ได้ ซึ่ง ความ อับ อาย จะ เกิด ถ้อย ความ วุ่น วาย วิวาท ด้วย ชาย อัน มา แต่ บ้าน เมือง ไกล หนึ่ง โสด จะ เกิด โทษ ไภย ภอย ถอด ยศ ไกร เพราะ ลูก หญิง ใจ พาล ผิ ว่า ไข้ ต้อง ผี บ้าน ปั้น ยักษ์ ถือ ตรี ทะยาน แล รูป ปีศาจ แปด คน ปั้น รูป ชน มระณะ ต่าง ตน เสร็จ แล้ว บูชา ให้ ชอบ กล จึ่ง ไป เสีย หน  จะ หาย คลาย ไข้ เสร็จ สรรพ ความ โศก จะ ดับ จะ ได้ ซึ่ง ความ สถาพร'
+} else if (sex === "ชาย" && male[z] == "อุดร" && m == 6 || sex === "หญิง" && female[z] == "อุดร" && m == 6){
+    document.getElementById("อุดร").style.color = "red"
+    document.getElementById("h3").style.color = "red"
+    document.getElementById("text").innerHTML='วรราช พานร เมื่อ ทำ ตะบะ ฤทธิ์ ทาย ว่า โชค งาม ยาม ดี ท้าว ไทย ธิบดี จะ ให้ บำเหน็จ รางวัล ถ้า คิด สิ่ง ใด จะ ได้ สิ่ง นั้น พรรค พวก เผ้า พันธุ์ จะ มา พิรมย์ สา สมร'
+} else if (sex === "ชาย" && male[z] == "อุดร" && m == 8 || sex === "หญิง" && female[z] == "อุดร" && m == 8){
+    document.getElementById("อุดร").style.color = "red"
+    document.getElementById("h3").style.color = "red"
+    document.getElementById("text").innerHTML='วายุบุตร ภูธร เมื่อ ต้อง ราค ตรึง ตรา ทาย ว่า เคราะห์ ร้าย หนัก หนา อย่า ได้ ยาตรา จะ อัปยศ อดสู ให้ เกรง ฝูง เสี้ยน สัตรู หนึ่ง โสด เกรง งู จะ เกิด ตระหนก ตก ใจ เดิม ที จะ มี โภย ไภย ภาย น่า จะ มี ไชย ชะนะ แก่ ราช สัตรู'
+} else if (sex === "ชาย" && male[z] == "อุดร" && m == 5 || sex === "หญิง" && female[z] == "อุดร" && m == 5){
+    document.getElementById("อุดร").style.color = "red"
+    document.getElementById("h3").style.color = "red"
+    document.getElementById("text").innerHTML='วายุบุตร โฉมตรู เมื่อ มา แต่ เมือง ลงกา ทาย ว่า มีไชย มหิมา พลัด จาก ถานา จะ คืน มา ยัง สถาน จะ ได้ ลุ ลาภ สการ ค่า ไทย บริวาร ยศ ศักดิ์ สมบูรณ์ ผิ ไข้ ให้ เจ็บ อาดูร เดือด ร้อน ทารุณ เพราะ มี ที่ เห็น จึง ตก ใจ ให้ เสีย ผี ป่า โดย ไว ปั้น รูป วานร ไพร แล รูป ปีศาจ ทั้ง หก คน ปั้น รูป ชน มระณะ ต่าง ตน บูชา ให้ ชอบ กล แล้ว ไป เสีย หน ทิศ อุดร จะ หาย ความ ไข้ ทุกข์ ร้อน กิน อยู่ หลับ นอน เปน ปรกติ ปรีดา'
+}
+
+
+
+
+ 
+}
+document.querySelector('.cal').addEventListener("click", ()=>cal())
+
+    </script>
+</body>
+</html>
